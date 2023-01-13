@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1673639247446,
+  "timestamp": 1673639893322,
   "index": "/angular_pec5/index.html",
   "assetGroups": [
     {
@@ -45,7 +45,8 @@
     {
       "name": "characters-api",
       "patterns": [
-        "https:\\/\\/thronesapi\\.com\\/api\\/v2\\/Characters\\/.*"
+        "https:\\/\\/thronesapi\\.com\\/api\\/v2\\/Characters\\/.*",
+        "https:\\/\\/thronesapi\\.com\\/api\\/v2\\/Characters"
       ],
       "strategy": "freshness",
       "maxSize": 50,
