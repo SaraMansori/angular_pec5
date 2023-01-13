@@ -32,7 +32,10 @@
       "name": "characters-api",
       "urls": [
         "https://thronesapi.com/api/v2/Characters/**",
-        "https://thronesapi.com/api/v2/Characters"
+        "https://thronesapi.com/api/v2/Characters",
+        "https://thronesapi.com/assets/images/**",
+        "https://fonts.googleapis.com/**",
+        "https://fonts.gstatic.com/**"
       ],
       "cacheConfig": {
         "maxSize": 50,
