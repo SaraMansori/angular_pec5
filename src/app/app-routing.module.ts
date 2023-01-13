@@ -4,9 +4,9 @@ import { CharacterComponent } from './components/character/character.component';
 import { CharactersComponent } from './components/characters/characters.component';
 
 const routes: Routes = [
-  { path: '', component: CharactersComponent },
+  { path: 'characters', component: CharactersComponent },
   { path: 'character/:id', component: CharacterComponent },
-  { path: '**', redirectTo: '' },
+  { path: '**', redirectTo: 'characters' },
 ];
 
 @NgModule({

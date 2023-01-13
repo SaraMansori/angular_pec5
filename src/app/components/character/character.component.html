@@ -1,6 +1,6 @@
 <div class="container character_detail">
   <mat-spinner *ngIf="isLoading"></mat-spinner>
-  <a href="/characters" class="back-btn">
+  <a [routerLink]="['/characters']" class="back-btn">
     <button mat-fab color="primary" aria-label="Go back to characters list">
       <mat-icon>arrow_back</mat-icon>
     </button>
