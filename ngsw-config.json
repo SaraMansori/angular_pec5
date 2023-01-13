@@ -30,9 +30,9 @@
   "dataGroups": [
     {
       "name": "characters-api",
-      "urls": ["/https://thronesapi.com/api/v2/Characters/**"],
+      "urls": ["https://thronesapi.com/api/v2/Characters/**"],
       "cacheConfig": {
-        "maxSize": 10,
+        "maxSize": 50,
         "maxAge": "1h",
         "timeout": "1s",
         "strategy": "freshness"

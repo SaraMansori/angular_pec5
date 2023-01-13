@@ -1,12 +1,10 @@
 <a [routerLink]="['/character', character.id]">
-  <mat-card class="card">
+  <mat-card class="card" @enterState>
     <mat-card-header>
       <mat-card-title>{{ character.firstName }}</mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      <div class="card_image">
-        <img [src]="character.imageUrl" [alt]="character.firstName" />
-      </div>
+      {{ character.family }}
     </mat-card-content>
   </mat-card>
 </a>
