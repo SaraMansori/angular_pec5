@@ -1,0 +1,50 @@
+<div class="container">
+  <h1>Game of Thrones Characters</h1>
+  <div class="display-mode">
+    <mat-icon
+      aria-hidden="false"
+      aria-label="Table view"
+      fontIcon="toc"
+      (click)="changeDisplayMode('TABLE')"
+    ></mat-icon>
+    <mat-icon
+      aria-hidden="false"
+      aria-label="Table view"
+      fontIcon="dashboard"
+      (click)="changeDisplayMode('CARDS')"
+    ></mat-icon>
+  </div>
+  <mat-spinner *ngIf="isLoading"></mat-spinner>
+  <div *ngIf="displayMode === 'CARDS'" class="card-grid">
+    <app-card
+      *ngFor="let character of characters"
+      [character]="character"
+    ></app-card>
+  </div>
+  <div *ngIf="displayMode === 'TABLE'" class="table-grid">
+    <mat-table [dataSource]="characters" class="mat-elevation-z8">
+      <ng-container matColumnDef="firstName">
+        <th mat-header-cell *matHeaderCellDef>First Name</th>
+        <td mat-cell *matCellDef="let character">{{ character.firstName }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="lastName">
+        <th mat-header-cell *matHeaderCellDef>Last Name</th>
+        <td mat-cell *matCellDef="let character">{{ character.lastName }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="title">
+        <th mat-header-cell *matHeaderCellDef>Title</th>
+        <td mat-cell *matCellDef="let character">{{ character.title }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="family">
+        <th mat-header-cell *matHeaderCellDef>Family</th>
+        <td mat-cell *matCellDef="let character">{{ character.family }}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </mat-table>
+  </div>
+</div>

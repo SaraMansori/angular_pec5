@@ -1,0 +1,21 @@
+mat-table,
+table {
+  width: 100%;
+}
+
+p {
+  text-align: center;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+img {
+  object-fit: cover;
+  width: 15rem;
+  height: 15rem;
+}

@@ -1,0 +1,16 @@
+<div class="container character_detail">
+  <mat-spinner *ngIf="isLoading"></mat-spinner>
+  <a href="/characters" class="back-btn">
+    <button mat-fab color="primary" aria-label="Go back to characters list">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <span>Back to characters</span>
+  </a>
+  <h1>{{ character.fullName }}</h1>
+  <img [src]="character.imageUrl" [alt]="character.firstName" />
+  <mat-tab-group>
+    <mat-tab label="Title"> {{ character.title }} </mat-tab>
+    <mat-tab label="Family"> {{ character.family }} </mat-tab>
+    <mat-tab label="Image"> {{ character.image }} </mat-tab>
+  </mat-tab-group>
+</div>
